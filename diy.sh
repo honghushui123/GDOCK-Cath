@@ -21,7 +21,10 @@ sed -i 's/config internal themes/config internal themes\n    option Argon  \"\/l
 #ln -s ../../../luci-theme-argon ./package/lean/
 
 echo '修改wifi名称'
-sed -i 's/OpenWrt/G-DOCK/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+#sed -i 's/OpenWrt/G-DOCK/g' package/kernel/mac80211/files/lib/wifi/mac80211.sh
+
+sed -i "s/OpenWrt /${Author} compiled in $(TZ=UTC-8 date "+%Y.%m.%d") @ OpenWrt /g" $ZZZ
+sed -i '/CYXluq4wUazHjmCDBCqXF/d' $ZZZ
 
 echo '修改banner'
 rm -rf package/base-files/files/etc/banner
