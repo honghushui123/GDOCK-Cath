@@ -43,8 +43,8 @@ svn co https://github.com/kenzok8/openwrt-packages/trunk/adguardhome ../diy/adgu
 
 sed -i '$a src-git Aibx https://github.com/Aibx/OpenWRT-Packages' feeds.conf.default
 
-echo '集成diy目录'
-ln -s ../../diy ./package/openwrt-packages
+#echo '集成diy目录'
+#ln -s ../../diy ./package/openwrt-packages
 
 #echo '首页增加CPU频率动态显示'
 #cp -f ../diy/mod-index.htm ./feeds/luci/modules/luci-mod-admin-full/luasrc/view/admin_status/index.htm
