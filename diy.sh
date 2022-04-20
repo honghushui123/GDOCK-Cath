@@ -41,6 +41,8 @@ svn co https://github.com/kenzok8/openwrt-packages/trunk/adguardhome ../diy/adgu
 #echo 'JD script'
 #git clone https://github.com/Cathgao/luci-app-jd-dailybonus ../diy/luci-app-jd-dailybonus
 
+sed -i '$a src-git Aibx https://github.com/Aibx/OpenWRT-Packages' feeds.conf.default
+
 echo '集成diy目录'
 ln -s ../../diy ./package/openwrt-packages
 
